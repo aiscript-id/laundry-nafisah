@@ -17,7 +17,7 @@
         <!-- message chat -->
         <div class="row" id="chat-body" style="height: 300px; overflow-y:scroll; overflow-x:hidden">
         <?php foreach ($messages as $msg):?>
-            <div class="col-md-8 <?php if($msg->side == '2') : echo ''; else : echo 'offset-4'; endif;  ?> mb-3">
+            <div class="col-md-8 <?php if($msg->side == '2') : echo ''; else : echo 'offset-4'; endif;  ?>">
               <div class="card mb-0">
                 <div class="card-body p-1 px-2">
                   <div class="row">
