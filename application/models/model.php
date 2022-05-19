@@ -90,6 +90,38 @@ class Model extends CI_Model{
             return $result;
     }
 
+	// get all chat
+	public function get_all_chat()
+	{
+		$this->db->select('chat.*, nama, username');
+		$this->db->from('chat');
+		$this->db->join('user','chat.user_id = user.id');
+		$this->db->order_by('last_message','desc');
+		$query = $this->db->get();
+		return $query;
+	}
+
+	// get_chat_by_id
+	public function get_chat_by_id($id)
+	{
+		$this->db->select('*');
+		$this->db->from('chat');
+		$this->db->join('user','chat.user_id = user.id');
+		$this->db->where('chat.id',$id);
+		$query = $this->db->get();
+		return $query;
+	}
+
+	// get message by id
+	public function get_message_by_id($id)
+	{
+		$this->db->select('*');
+		$this->db->from('chat_message');
+		$this->db->where('chat_id', $id);
+		$query = $this->db->get();
+		return $query;
+	}
+
 
 }
  ?>

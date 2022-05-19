@@ -81,23 +81,21 @@
 </style>
 <div class="contact">
   <div class="container ">
-      <div class="d-flex align-items-center p-3 my-3 rounded shadow-sm" style="background-color: rgb(189 215 244) 
-">
-        <!-- <img class="mr-3" src="/docs/4.3/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48"> -->
-        <img class="img-profile rounded-circle mr-2" width="48" height="48" src="https://ui-avatars.com/api/?name=<?= $this->session->nama ?>">
-
-        <div class="lh-100">
-          <h6 class="mb-0 text-primary lh-100"><?= $this->session->userdata('nama') ?></h6>
-          <small>Pelanggan</small>
-        </div>
-      </div>
-      <div class="row justify-content-center mb-5">
+      <div class="row justify-content-center mb-5 py-4 my-3 ">
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img class="card-img-top" src="holder.js/100px180/" alt="">
             <div class="card-body">
-              <h4 class="card-title">Title</h4>
-              <p class="card-text">Text</p>
+              <div class="text-center mb-3">
+                <img class="img-profile rounded-circle mr-2" width="100" height="100" src="https://ui-avatars.com/api/?name=<?= $this->session->nama ?>">
+              </div>
+
+              <!-- <h4 class="card-title">Title</h4> -->
+              <p class="card-text"><?= $this->session->nama ?>
+              <br>
+              <b><?= $this->session->username ?></b>
+              </p>
+              <!-- chat penjual -->
+              <a href="<?= base_url('chat/create_chat') ?>" class="btn btn-primary btn-block">Chat Penjual</a>
             </div>
           </div>
         </div>

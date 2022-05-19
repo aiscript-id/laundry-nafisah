@@ -69,6 +69,13 @@ $aktif  = 'active';
           <span>User</span></a>
       </li>
 
+      <li class="nav-item <?=($hal=='chat')?$aktif:'';?>">
+        <a class="nav-link" href="<?=base_url('admin/chat') ?>">
+          <i class="fas fa-fw fa-inbox"></i>
+          <span>Chat</span>
+        </a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
