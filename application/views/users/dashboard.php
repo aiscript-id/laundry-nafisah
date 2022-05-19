@@ -95,7 +95,7 @@
               <b><?= $this->session->username ?></b>
               </p>
               <!-- chat penjual -->
-              <a href="<?= base_url('chat/create_chat') ?>" class="btn btn-primary btn-block">Chat Penjual</a>
+              <a href="<?= base_url('chat/create_chat') ?>" class="btn btn-primary btn-block">Chat Admin Laundry Nafisah</a>
             </div>
           </div>
         </div>
