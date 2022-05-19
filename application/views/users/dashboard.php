@@ -103,7 +103,13 @@
         <div class="my-3 p-3 bg-white rounded shadow-sm">
           <h6 class="border-bottom border-gray pb-2 mb-0">Riwayat</h6>
           <!-- foreach transaksi -->
-          <?php $this->load->model(['model']); ?>
+          <?php if(!@$transaksi) : ?>
+            <!-- image empty -->
+            <div class="text-center">
+              <img src="<?= base_url('assets/img/empty.png') ?>" width="200" height="200">
+              <h5 class="mt-3">Belum ada transaksi</h5>
+            </div>
+          <?php else : ?>
           <?php foreach($transaksi as $t): ?>
           <div class="media text-muted pt-3">
             <?php
@@ -155,6 +161,7 @@
             </div>
           </div>
           <?php endforeach; ?>
+          <?php endif; ?>
         </div>
         </div>
       </div>
