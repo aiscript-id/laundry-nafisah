@@ -42,7 +42,7 @@
           <thead>
             <tr>
               <th width="10px">No</th>
-              <th width="20px">Id Transaksi</th>
+              <th width="20px">No Struk</th>
               <th >Nama</th>
               <th>Total Transaksi</th>
               <th width="100px">Tanggal</th>
