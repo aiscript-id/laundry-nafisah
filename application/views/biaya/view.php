@@ -16,7 +16,7 @@
     <div class="card-body">
       <!-- search by date -->
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 d-none">
           <form action="<?=base_url('admin/biaya')?>" method="get">
             <div class="row">
               <div class="col-md-3">

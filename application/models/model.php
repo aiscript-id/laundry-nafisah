@@ -148,7 +148,7 @@ class Model extends CI_Model{
 			$this->db->where('tgl_transaksi <=', $tanggal_akhir);
 		}
 		
-		$data = $this->db->get($table);
+		$data = $this->db->order_by('tgl_transaksi', 'desc')->get($table);
 		return $data;
 	}
 
