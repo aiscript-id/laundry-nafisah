@@ -13,6 +13,30 @@
       </div>
     </div>
     <div class="card-body">
+      <form action="<?=base_url('admin/transaksi')?>" method="get">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <!-- <label for="">Tanggal Awal</label> -->
+              <input type="date" name="tanggal_awal" class="form-control" value="<?=$this->input->get('tanggal_awal')?>">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <!-- <label for="">Tanggal Akhir</label> -->
+              <input type="date" name="tanggal_akhir" class="form-control" value="<?=$this->input->get('tanggal_akhir')?>">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">&nbsp; </label>
+              <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search"></i> Cari</button>
+              <!-- reset button -->
+              <a href="<?=base_url('admin/transaksi')?>" class="btn btn-sm btn-danger"><i class="fa fa-times"></i> Reset</a>
+            </div>
+          </div>
+        </div>
+      </form>
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
@@ -20,6 +44,7 @@
               <th width="10px">No</th>
               <th width="20px">Id Transaksi</th>
               <th >Nama</th>
+              <th>Total Transaksi</th>
               <th width="100px">Tanggal</th>
               <th width="100px" class="text-center">Aksi</th>
             </tr>
@@ -34,6 +59,7 @@
                     <td><?=$no?></td>
                     <td><?=$t->id_transaksi?></td>
                     <td><?=$t->nama?></td>
+                    <td><?=rupiah($t->total_transaksi)?></td>
                     <td><?=$t->tgl_transaksi?></td>
                     <td>
                         <button class="btn btn-sm btn-info viewDetail" title="Detail" id="viewDetail" value="<?=$id?>"><i class="fa fa-eye"></i></button>

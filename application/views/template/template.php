@@ -46,6 +46,11 @@ $aktif  = 'active';
           <i class="fas fa-fw fa-handshake"></i>
           <span>Transaksi Laundry</span></a>
       </li>
+      <li class="nav-item <?=($hal=='biaya')?$aktif:''; ?>">
+        <a class="nav-link" href="<?=base_url('admin/biaya') ?>">
+          <i class="fas fa-fw fa-coins"></i>
+          <span>Biaya Operasional</span></a>
+      </li>
       <li class="nav-item <?=($hal=='status')?$aktif:''; ?>" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-stream"></i>

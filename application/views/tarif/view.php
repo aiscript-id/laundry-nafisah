@@ -31,7 +31,7 @@
             <tr>
               <td><?=$t->nama_tarif ?></td>
               <td><?=$t->waktu_tarif ?></td>
-              <td><?=$t->biaya_tarif ?></td>
+              <td><?=rupiah($t->biaya_tarif) ?></td>
               <td><?=$t->jenis_tarif ?></td>
               <td><a href="<?=base_url('admin/tarif/edit/'.$id) ?>" class="btn btn-sm btn-warning" title="Edit">Edit</a>
                   <button href="" onclick="deleteConfirm('<?=base_url('admin/tarif/delete/'.$id) ?>')" class="btn btn-sm btn-danger" title="Hapus" data-target="#modalDelete" data-toggle="modal">Hapus</button>

@@ -122,6 +122,36 @@ class Model extends CI_Model{
 		return $query;
 	}
 
+	public function get_all_biaya($table)
+	{
+
+		// $data = $this->db->get($table);
+		// if post tanggal_awal and tanggal_akhir
+		if(isset($_GET['tanggal_awal']) && isset($_GET['tanggal_akhir'])){
+			$tanggal_awal = $_GET['tanggal_awal'];
+			$tanggal_akhir = $_GET['tanggal_akhir'];
+			$this->db->where('tanggal >=', $tanggal_awal);
+			$this->db->where('tanggal <=', $tanggal_akhir);
+		}
+		
+		$data = $this->db->get($table);
+		return $data;
+	}
+
+	public function get_all_transaksi($table)
+	{
+
+		if(isset($_GET['tanggal_awal']) && isset($_GET['tanggal_akhir'])){
+			$tanggal_awal = $_GET['tanggal_awal'];
+			$tanggal_akhir = $_GET['tanggal_akhir'];
+			$this->db->where('tgl_transaksi >=', $tanggal_awal);
+			$this->db->where('tgl_transaksi <=', $tanggal_akhir);
+		}
+		
+		$data = $this->db->get($table);
+		return $data;
+	}
+
 
 }
  ?>

@@ -20,11 +20,22 @@ class Laporan extends CI_Controller {
 	public function index()
 	{
 		$data = [
-					'content'	=> $this->folder.'coba',
+					'content'	=> $this->folder.'keuangan',
 					'section'	=> $this->section,
-					'tampil'	=> $this->model->get_all($this->table)->result()
+					'tampil'	=> $this->model->get_all_transaksi($this->table)->result(),
+					'biaya'		=> $this->model->get_all_biaya('biaya')->result(),
 				];
 		$this->load->view('template/template', $data);
+	}
+
+	public function print_keuangan($awal, $akhir)
+	{
+		$data = [
+			'tampil'	=> $this->model->get_all_transaksi($this->table)->result(),
+			'biaya'		=> $this->model->get_all_biaya('biaya')->result(),
+			'print'	=> true,	
+		];
+		$this->load->view($this->folder.'keuangan', $data);
 	}
 
 }

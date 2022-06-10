@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 			$data = [
 				'content'	=> $this->folder.('view'),
 				'section'	=> $this->section,
-				'tampil'	=> $this->model->get_all($this->table)->result()
+				'tampil'	=> $this->model->get_all_transaksi($this->table)->result()
 			];
 
 			$this->load->view('template/template', $data);

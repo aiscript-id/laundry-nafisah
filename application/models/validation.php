@@ -120,6 +120,18 @@ defined('BASEPATH') OR exit ('No script direct access allowed');
 			];
 		}
 
+		public function val_biaya()
+		{
+			return [
+				[
+					'field'	=> 'nama_pengeluaran',
+					'label'	=> 'Nama Pengeluaran',
+					'rules'	=> 'required|rtrim',
+					'errors'=> ['required' 	=> 'Form <b>%s</b> tidak boleh kosong']
+				],
+			];
+		}
+
 
 
 

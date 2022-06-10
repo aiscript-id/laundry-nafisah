@@ -15,7 +15,7 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Struk</th>
+              <th>No. Struk</th>
               <th>Tanggal</th>
               <th>Paket</th>
               <th>Berat/Jumlah</th>
