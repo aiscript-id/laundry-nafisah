@@ -19,6 +19,8 @@
                     <a href="<?=base_url('user/auth/register')?>" class="btn btn-link btn-block px-5 mt-3"> Belum punya akun? Register</a>
                   </form>
 
+                  <p>Jika lupa password. Hubungi Admin</p>
+
               </div>
           </div>
       </div>

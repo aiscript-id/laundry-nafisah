@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 			$id=str_replace(['-','_','~',],['=','+','/'], $id);
 			$id=$this->encryption->decrypt($id);
 
-			$this->model->reset_pass($this->table, 'id', $id, 'password');
+			$this->model->reset_pass($id, 'password');
 			$this->session->set_flashdata('flash','<div class="alert alert-success alert-dismissible fade show" role="alert"><b>Password</b> berhasil di reset.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 			redirect('admin/user');
 

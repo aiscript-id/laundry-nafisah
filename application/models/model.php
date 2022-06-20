@@ -43,11 +43,13 @@ class Model extends CI_Model{
 		$this->db->update($table, $data , [$id=>$where]);
 	}
 
-	public function reset_pass($table, $id, $where, $field)
+	public function reset_pass($id, $pass)
 	{
-		$pass = '$2y$10$NuJpueDsXtO2jre2Dq5TXucFV8hEnOV4CLUnMAgvCpO5o2wIe6wOG';
-		$data = [$field=>$pass];
-		$this->db->update($table, $data, [$id=>$where]);
+		// $pass = '$2y$10$NuJpueDsXtO2jre2Dq5TXucFV8hEnOV4CLUnMAgvCpO5o2wIe6wOG';
+		$pass = password_hash($pass, PASSWORD_DEFAULT);
+		$data = ['password'	=>	$pass];
+
+		$this->db->update('user', $data, ['id' => $id]);
 	}
 
 
