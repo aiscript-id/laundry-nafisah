@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Laundry Nafisah - <?=$section?></title>
+  <title>Laundry Napisah - <?=$section?></title>
 
   <!-- Custom fonts for this template-->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">

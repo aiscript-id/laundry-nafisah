@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Laundry Nafisah - Landing Page</title>
+  <title>Laundry Napisah - Landing Page</title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?=base_url('assets/users/')?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top p-3 shadow">
       <div class="container">
-        <a class="navbar-brand font-weight-bold " href="<?=base_url('')?>">Laundry Nafisah</a>
+        <a class="navbar-brand font-weight-bold " href="<?=base_url('')?>">Laundry Napisah</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

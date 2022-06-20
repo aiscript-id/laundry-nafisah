@@ -16,7 +16,7 @@
             </div>
             <ul class="list-group">
               <li class="list-group-item"><i class="fas fa-phone"></i> 081995862719</li>
-              <li class="list-group-item"><i class="far fa-envelope"></i> laundrynafisah@gmail.com </li>
+              <li class="list-group-item"><i class="far fa-envelope"></i> laundryNapisah@gmail.com </li>
             </ul>
             <div class="card text-white mt-3" style="background-color: #3fa1c6">
               <div class="card-header p-1">

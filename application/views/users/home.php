@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-xl-9 text-left mx-auto">
             <h1 >Bingung mau cari Laundry ?</h1>
-              <p class="mb-5" style="margin-top:-10px; font-size: 13px ">Ayo ke Nafisah Laundry. cepat, murah dan hasilnya memuaskan</p>
+              <p class="mb-5" style="margin-top:-10px; font-size: 13px ">Ayo ke Napisah Laundry. cepat, murah dan hasilnya memuaskan</p>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-9 mx-auto">
             <form method="GET" action="<?=base_url('cari')?>">

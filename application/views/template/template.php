@@ -4,6 +4,22 @@ $hal    = $this->uri->segment(2);
 $aktif  = 'active';
 ?>
 
+<style>
+  .bg-pink{
+    background-color: #ffbbea;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffbbea), to(#ffbbea));
+    /* background-image: linear-gradient(180deg, #eaa4c4 10%, #d5156d 100%); */
+    background-size: cover;
+  }
+
+  .bg-light-blue{
+    /* abd3f6 */
+    background-color: #abd3f6;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #abd3f6), to(#abd3f6));
+    /* background-image: linear-gradient(180deg, #eaa4c4 10%, #d5156d 100%); */
+    background-size: cover;
+  }
+</style>
 
 
 <body id="page-top">
@@ -12,14 +28,14 @@ $aktif  = 'active';
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-white sidebar sidebar-light accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center bg-pink justify-content-center" href="index.html">
         <!-- <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div> -->
-        <div class="sidebar-brand-text mx-3">Nafisah Laundry</div>
+        <div class="sidebar-brand-text mx-3">Napisah Laundry</div>
       </a>
 
       <!-- Divider -->
@@ -100,7 +116,7 @@ $aktif  = 'active';
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-pink topbar static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -138,7 +154,7 @@ $aktif  = 'active';
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid bg-light-blue pt-4 pb-4">
             
           <!-- Page Heading -->
           
@@ -154,10 +170,10 @@ $aktif  = 'active';
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <footer class="sticky-footer bg-light-blue">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Laundry Nafisah @ 2022</span>
+            <span>Laundry Napisah @ 2022</span>
           </div>
         </div>
       </footer>

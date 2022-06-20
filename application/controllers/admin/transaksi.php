@@ -359,7 +359,7 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 
 			$pdf->SetFont('Arial','',8);
 			$pdf->Cell(0,2,'',0,1); //Jarak
-			$pdf->Cell(125,6,'*Note: untuk pengecekan progres laundry di www.laundrynafisah.com dan masukkan no struk anda.',0,0);
+			$pdf->Cell(125,6,'*Note: untuk pengecekan progres laundry di www.laundryNapisah.com dan masukkan no struk anda.',0,0);
 			// End Table
 			$pdf->Output();
 

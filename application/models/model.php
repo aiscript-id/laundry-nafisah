@@ -66,7 +66,7 @@ class Model extends CI_Model{
 
 	function kirimNotifikasi($phone,$msg)
     {
-            $link  =  "https://pati.wablas.com/api/send-message";
+            $link  =  "https://eu.wablas.com/api/send-message";
             $data = [
             'phone' => $phone,
             'message' => $msg,
@@ -74,7 +74,7 @@ class Model extends CI_Model{
             
             
             $curl = curl_init();
-            $token =  "haUygOF57uityN1AoGVvxpT3AXVdmbG1kzhRsP9pia0bAVGJ7Ob4St46pMmoPH6t";
+            $token =  "Y3ZQkfd5Uu27dWPoibZDT0sMC3gD4v7qmU9DPhht3XamiZtJfaQPjqjIe8DIoK6t";
     
             curl_setopt($curl, CURLOPT_HTTPHEADER,
                 array(
@@ -91,6 +91,18 @@ class Model extends CI_Model{
             curl_close($curl); 
             return $result;
     }
+
+	function kirimNotifikasi2($phone, $message){
+		// break
+		var_dump($phone);
+		$curl = curl_init();
+		$token = "Y3ZQkfd5Uu27dWPoibZDT0sMC3gD4v7qmU9DPhht3XamiZtJfaQPjqjIe8DIoK6t";
+		curl_setopt($curl, CURLOPT_URL,  "https://eu.wablas.com/api/send-message?phone=$phone&message=$message&token=$token&isGroup=$group&random=true");
+		$result = curl_exec($curl);
+		curl_close($curl);
+		echo "<pre>";
+		print_r($result);
+	}
 
 	// get all chat
 	public function get_all_chat()

@@ -1,4 +1,13 @@
-<body id="page-top" class="bg-gradient-primary">
+<style>
+  
+  .bg-gradient-pink {
+    background-color: #ffbbea;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffbbea), to(#ffbbea));
+    /* background-image: linear-gradient(180deg, #eaa4c4 10%, #d5156d 100%); */
+    background-size: cover;
+  }
+</style>
+<body id="page-top" class="bg-gradient-pink">
 
 <div class="container mt-5">
     <!-- Outer Row -->

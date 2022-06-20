@@ -87,7 +87,7 @@
       <div class="card">
         <img class="card-img-top" src="holder.js/100x180/" alt="">
         <div class="card-header mb-4">
-          <h6 class="card-title mb-0">Admin Laundry Nafisah
+          <h6 class="card-title mb-0">Admin Laundry Napisah
             <a href="<?=base_url('dashboard') ?>" class="btn btn-sm btn-white float-right"><i class="fa fa-arrow-left"></i> Kembali</a>
 
             

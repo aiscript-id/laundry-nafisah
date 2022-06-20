@@ -71,8 +71,8 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 			
 			$transaksi = $this->model->get_by('transaksi', 'id_transaksi', $where)->row();
 			$user = $this->model->get_by('user', 'id', $transaksi->id_user)->row();
-			$msg = 'Hi, '.$user->nama.'. Kami dari Laundry Nafisah. Order No. '.$transaksi->id_transaksi.'('.$transaksi->paket_transaksi.') telah siap. Pakaian kamu sudah selesai dicuci nih, silahkan ambil ke tempat kami ya. Terima Kasih';
-			$this->model->kirimNotifikasi($user->whatsapp, $msg);
+			$msg = 'Hi, '.$user->nama.'. Kami dari Laundry Napisah. Order No. '.$transaksi->id_transaksi.'('.$transaksi->paket_transaksi.') telah siap. Pakaian kamu sudah selesai dicuci nih, silahkan ambil ke tempat kami ya. Terima Kasih';
+			$this->model->kirimNotifikasi2($user->whatsapp, $msg);
 
 			redirect('admin/status/proses');
 		}
