@@ -8,15 +8,14 @@ $aktif  = 'active';
   .bg-pink{
     background-color: #ffbbea;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffbbea), to(#ffbbea));
-    /* background-image: linear-gradient(180deg, #eaa4c4 10%, #d5156d 100%); */
     background-size: cover;
+
   }
 
   .bg-light-blue{
     /* abd3f6 */
     background-color: #abd3f6;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #abd3f6), to(#abd3f6));
-    /* background-image: linear-gradient(180deg, #eaa4c4 10%, #d5156d 100%); */
     background-size: cover;
   }
 </style>
