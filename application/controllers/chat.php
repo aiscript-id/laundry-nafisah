@@ -9,9 +9,9 @@ class chat extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('my_model', 'model');
-		$this->load->model('my_validation', 'validation');
+		$this->load->model('validation_model', 'validation');
 		$this->load->library(['form_validation']);
-		
+
 	}
 
 	public function index()

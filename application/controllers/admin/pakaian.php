@@ -14,7 +14,7 @@ class Pakaian extends CI_Controller {
             redirect(base_url('')); 
         };
 		$this->load->model('my_model', 'model');
-		$this->load->model('my_validation', 'validation');
+		$this->load->model('validation_model', 'validation');
 		$this->load->library(['form_validation', 'encryption']);
 
 	}

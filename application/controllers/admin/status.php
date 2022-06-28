@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 	            redirect(base_url('')); 
 	        };
 			$this->load->model('my_model', 'model');
-			$this->load->model('my_validation', 'validation');
+			$this->load->model('validation_model', 'validation');
 		}
 
 
