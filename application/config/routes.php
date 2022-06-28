@@ -61,4 +61,4 @@ $route['auth'] 	= "UserController/auth";
 $route['dashboard'] = "UserController/dashboard";
 
 // ADMIN
-$route['admin'] 	= "admin/login";
+$route['admin'] 	= "Admin/Login";
