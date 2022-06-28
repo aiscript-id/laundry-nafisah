@@ -1118,10 +1118,18 @@ class CI_Form_validation {
 	public function is_unique($str, $field)
 	{
 		sscanf($field, '%[^.].%[^.]', $table, $field);
-		return isset($this->CI->db)
-			// ? ($this->CI->db->limit(1)->get_where($table, array($field => $str))->affected_rows() === 0)
-			? $this->CI->db->limit(1)->get_where($table, array($field => $str))->affected_rows()
-			: FALSE;
+		$query = $this->db->query("SELECT COUNT(*) AS count FROM `$table` WHERE `$field` = '".$this->db->escape_str($str)."'");
+		$row = $query->num_rows();
+		if ($row > 0) {
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+		
+		// return isset($this->CI->db)
+		// 	? ($this->CI->db->limit(1)->get_where($table, array($field => $str))->affected_rows() === 0)
+		// 	// ? $this->CI->db->limit(1)->get_where($table, array($field => $str))->affected_rows()
+		// 	: FALSE;
 	}
 
 	// --------------------------------------------------------------------
