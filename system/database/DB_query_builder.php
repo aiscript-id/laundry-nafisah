@@ -1426,7 +1426,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			$this->qb_cache_orderby = $qb_cache_orderby;
 		}
 
-		if ($result->affected_rows() === 0)
+		if ($result->num_rows() === 0)
 		{
 			return 0;
 		}

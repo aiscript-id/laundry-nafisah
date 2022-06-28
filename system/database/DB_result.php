@@ -97,7 +97,7 @@ class CI_DB_result {
 	 *
 	 * @var	int
 	 */
-	public $affected_rows;
+	public $num_rows;
 
 	/**
 	 * Row data
@@ -127,22 +127,22 @@ class CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function affected_rows()
+	public function num_rows()
 	{
-		if (is_int($this->affected_rows))
+		if (is_int($this->num_rows))
 		{
-			return $this->affected_rows;
+			return $this->num_rows;
 		}
 		elseif (count($this->result_array) > 0)
 		{
-			return $this->affected_rows = count($this->result_array);
+			return $this->num_rows = count($this->result_array);
 		}
 		elseif (count($this->result_object) > 0)
 		{
-			return $this->affected_rows = count($this->result_object);
+			return $this->num_rows = count($this->result_object);
 		}
 
-		return $this->affected_rows = count($this->result_array());
+		return $this->num_rows = count($this->result_array());
 	}
 
 	// --------------------------------------------------------------------
@@ -181,7 +181,7 @@ class CI_DB_result {
 		{
 			return $this->custom_result_object[$class_name];
 		}
-		elseif ( ! $this->result_id OR $this->affected_rows === 0)
+		elseif ( ! $this->result_id OR $this->num_rows === 0)
 		{
 			return array();
 		}
@@ -240,7 +240,7 @@ class CI_DB_result {
 		// In the event that query caching is on, the result_id variable
 		// will not be a valid resource so we'll simply return an empty
 		// array.
-		if ( ! $this->result_id OR $this->affected_rows === 0)
+		if ( ! $this->result_id OR $this->num_rows === 0)
 		{
 			return array();
 		}
@@ -281,7 +281,7 @@ class CI_DB_result {
 		// In the event that query caching is on, the result_id variable
 		// will not be a valid resource so we'll simply return an empty
 		// array.
-		if ( ! $this->result_id OR $this->affected_rows === 0)
+		if ( ! $this->result_id OR $this->num_rows === 0)
 		{
 			return array();
 		}

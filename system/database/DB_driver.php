@@ -735,7 +735,7 @@ abstract class CI_DB_driver {
 			$CR = new CI_DB_result($this);
 			$CR->result_object	= $RES->result_object();
 			$CR->result_array	= $RES->result_array();
-			$CR->affected_rows		= $RES->affected_rows();
+			$CR->num_rows		= $RES->num_rows();
 
 			// Reset these since cached objects can not utilize resource IDs.
 			$CR->conn_id		= NULL;
@@ -1220,7 +1220,7 @@ abstract class CI_DB_driver {
 		}
 
 		$query = $this->query($this->_count_string.$this->escape_identifiers('numrows').' FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE));
-		if ($query->affected_rows() === 0)
+		if ($query->num_rows() === 0)
 		{
 			return 0;
 		}

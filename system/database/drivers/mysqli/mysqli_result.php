@@ -55,11 +55,11 @@ class CI_DB_mysqli_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function affected_rows()
+	public function num_rows()
 	{
-		return is_int($this->affected_rows)
-			? $this->affected_rows
-			: $this->affected_rows = $this->result_id->affected_rows;
+		return is_int($this->num_rows)
+			? $this->num_rows
+			: $this->num_rows = $this->result_id->num_rows;
 	}
 
 	// --------------------------------------------------------------------

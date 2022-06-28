@@ -328,7 +328,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 	 */
 	public function affected_rows()
 	{
-		return odbc_affected_rows($this->result_id);
+		return odbc_num_rows($this->result_id);
 	}
 
 	// --------------------------------------------------------------------

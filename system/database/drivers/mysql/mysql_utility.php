@@ -138,7 +138,7 @@ class CI_DB_mysql_utility extends CI_DB_utility {
 			// Grab all the data from the current table
 			$query = $this->db->query('SELECT * FROM '.$this->db->protect_identifiers($table));
 
-			if ($query->affected_rows() === 0)
+			if ($query->num_rows() === 0)
 			{
 				continue;
 			}
