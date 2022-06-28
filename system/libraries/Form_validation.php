@@ -1118,7 +1118,7 @@ class CI_Form_validation {
 	public function is_unique($str, $field)
 	{
 		sscanf($field, '%[^.].%[^.]', $table, $field);
-		$query = $this->db->query("SELECT COUNT(*) AS count FROM `$table` WHERE `$field` = '".$this->db->escape_str($str)."'");
+		$query = $this->CI->db->query("SELECT COUNT(*) AS count FROM `$table` WHERE `$field` = '".$this->db->escape_str($str)."'");
 		$row = $query->num_rows();
 		if ($row > 0) {
 			return FALSE;
