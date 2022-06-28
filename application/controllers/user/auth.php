@@ -16,6 +16,7 @@ class Auth extends CI_Controller {
 		$this->load->model('my_model', 'model');
 		$this->load->model('validation_model', 'validation');
 		$this->load->library(['form_validation','encryption']);
+		
 	}
 
 
