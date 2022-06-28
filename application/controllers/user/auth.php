@@ -13,7 +13,8 @@ class Auth extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['model','validation']);
+		$this->load->model('my_model', 'model');
+		$this->load->model('my_validation', 'validation');
 		$this->load->library(['form_validation','encryption']);
 	}
 

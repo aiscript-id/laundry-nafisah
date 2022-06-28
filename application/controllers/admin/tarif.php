@@ -17,7 +17,8 @@ class Tarif extends CI_Controller{
 		if($this->session->userdata('masuk') !=TRUE or $this->session->userdata('level') == 3){
             redirect(base_url('')); 
         };
-		$this->load->model(['model','validation']);
+		$this->load->model('my_model', 'model');
+		$this->load->model('my_validation', 'validation');
 		$this->load->library(['form_validation', 'encryption']);
 
 	}

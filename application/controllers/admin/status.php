@@ -12,7 +12,8 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 			if($this->session->userdata('masuk') !=TRUE or $this->session->userdata('level') == 3){
 	            redirect(base_url('')); 
 	        };
-			$this->load->model(['model']);
+			$this->load->model('my_model', 'model');
+			$this->load->model('my_validation', 'validation');
 		}
 
 

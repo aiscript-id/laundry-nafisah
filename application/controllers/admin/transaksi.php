@@ -11,7 +11,8 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 		function __construct(){
 			parent::__construct();
 			if($this->session->userdata('masuk') !=TRUE or $this->session->userdata('level') == 3){ redirect(base_url('')); };
-			$this->load->model(['model','validation']);
+			$this->load->model('my_model', 'model');
+			$this->load->model('my_validation', 'validation');
 			$this->load->library(['form_validation', 'encryption', 'pdf']);
 		}
 
@@ -85,10 +86,10 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 			];
 
 			if($this->cart->total_items() > 0){
-				$id 		= $items['id'];
+				$id 		= $i['id'];
 				$idPakaian 	= $this->input->post('id');
 				if($id==$idPakaian){
-					$up=['rowid'=>$rowid];
+					$up=['rowid'=>$id];
 					$this->cart->update($up);
 				}else{
 					$this->cart->insert($data);
@@ -208,10 +209,10 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 			];
 
 			if($this->cart->total_items()>0){
-				$id 		= $items['id'];
+				$id 		= $i['id'];
 				$idBarang 	= $this->input->post('id');
 				if($id==$idBarang){
-					$up=['rowid'=>$rowid];
+					$up=['rowid'=>$id];
 					$this->cart->update($up);
 				}else{
 					$this->cart->insert($data);
