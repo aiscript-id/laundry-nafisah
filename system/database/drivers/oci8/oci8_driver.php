@@ -426,7 +426,7 @@ class CI_DB_oci8_driver extends CI_DB {
 	 */
 	public function affected_rows()
 	{
-		return oci_num_rows($this->stmt_id);
+		return oci_affected_rows($this->stmt_id);
 	}
 
 	// --------------------------------------------------------------------

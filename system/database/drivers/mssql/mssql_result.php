@@ -55,11 +55,11 @@ class CI_DB_mssql_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function num_rows()
+	public function affected_rows()
 	{
-		return is_int($this->num_rows)
-			? $this->num_rows
-			: $this->num_rows = mssql_num_rows($this->result_id);
+		return is_int($this->affected_rows)
+			? $this->affected_rows
+			: $this->affected_rows = mssql_affected_rows($this->result_id);
 	}
 
 	// --------------------------------------------------------------------

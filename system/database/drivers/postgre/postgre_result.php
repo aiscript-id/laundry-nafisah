@@ -55,11 +55,11 @@ class CI_DB_postgre_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function num_rows()
+	public function affected_rows()
 	{
-		return is_int($this->num_rows)
-			? $this->num_rows
-			: $this->num_rows = pg_num_rows($this->result_id);
+		return is_int($this->affected_rows)
+			? $this->affected_rows
+			: $this->affected_rows = pg_affected_rows($this->result_id);
 	}
 
 	// --------------------------------------------------------------------

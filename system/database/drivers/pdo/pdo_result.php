@@ -55,26 +55,26 @@ class CI_DB_pdo_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function num_rows()
+	public function affected_rows()
 	{
-		if (is_int($this->num_rows))
+		if (is_int($this->affected_rows))
 		{
-			return $this->num_rows;
+			return $this->affected_rows;
 		}
 		elseif (count($this->result_array) > 0)
 		{
-			return $this->num_rows = count($this->result_array);
+			return $this->affected_rows = count($this->result_array);
 		}
 		elseif (count($this->result_object) > 0)
 		{
-			return $this->num_rows = count($this->result_object);
+			return $this->affected_rows = count($this->result_object);
 		}
-		elseif (($num_rows = $this->result_id->rowCount()) > 0)
+		elseif (($affected_rows = $this->result_id->rowCount()) > 0)
 		{
-			return $this->num_rows = $num_rows;
+			return $this->affected_rows = $affected_rows;
 		}
 
-		return $this->num_rows = count($this->result_array());
+		return $this->affected_rows = count($this->result_array());
 	}
 
 	// --------------------------------------------------------------------

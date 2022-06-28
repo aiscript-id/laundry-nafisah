@@ -77,17 +77,17 @@ class CI_DB_sqlsrv_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function num_rows()
+	public function affected_rows()
 	{
-		// sqlsrv_num_rows() doesn't work with the FORWARD and DYNAMIC cursors (FALSE is the same as FORWARD)
+		// sqlsrv_affected_rows() doesn't work with the FORWARD and DYNAMIC cursors (FALSE is the same as FORWARD)
 		if ( ! in_array($this->scrollable, array(FALSE, SQLSRV_CURSOR_FORWARD, SQLSRV_CURSOR_DYNAMIC), TRUE))
 		{
-			return parent::num_rows();
+			return parent::affected_rows();
 		}
 
-		return is_int($this->num_rows)
-			? $this->num_rows
-			: $this->num_rows = sqlsrv_num_rows($this->result_id);
+		return is_int($this->affected_rows)
+			? $this->affected_rows
+			: $this->affected_rows = sqlsrv_affected_rows($this->result_id);
 	}
 
 	// --------------------------------------------------------------------

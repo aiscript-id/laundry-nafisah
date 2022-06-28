@@ -65,7 +65,7 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 	 * Determines what cursor type to use when executing queries.
 	 *
 	 * FALSE or SQLSRV_CURSOR_FORWARD would increase performance,
-	 * but would disable num_rows() (and possibly insert_id())
+	 * but would disable affected_rows() (and possibly insert_id())
 	 *
 	 * @var	mixed
 	 */

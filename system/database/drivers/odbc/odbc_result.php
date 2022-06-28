@@ -55,28 +55,28 @@ class CI_DB_odbc_result extends CI_DB_result {
 	 *
 	 * @return	int
 	 */
-	public function num_rows()
+	public function affected_rows()
 	{
-		if (is_int($this->num_rows))
+		if (is_int($this->affected_rows))
 		{
-			return $this->num_rows;
+			return $this->affected_rows;
 		}
-		elseif (($this->num_rows = odbc_num_rows($this->result_id)) !== -1)
+		elseif (($this->affected_rows = odbc_affected_rows($this->result_id)) !== -1)
 		{
-			return $this->num_rows;
+			return $this->affected_rows;
 		}
 
-		// Work-around for ODBC subdrivers that don't support num_rows()
+		// Work-around for ODBC subdrivers that don't support affected_rows()
 		if (count($this->result_array) > 0)
 		{
-			return $this->num_rows = count($this->result_array);
+			return $this->affected_rows = count($this->result_array);
 		}
 		elseif (count($this->result_object) > 0)
 		{
-			return $this->num_rows = count($this->result_object);
+			return $this->affected_rows = count($this->result_object);
 		}
 
-		return $this->num_rows = count($this->result_array());
+		return $this->affected_rows = count($this->result_array());
 	}
 
 	// --------------------------------------------------------------------
