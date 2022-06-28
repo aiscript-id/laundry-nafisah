@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit ('No script direct access allowed');
 
-	class Validation extends CI_Model{
+	class Validation_model extends CI_Model{
 
 		public function val_login()
 		{
