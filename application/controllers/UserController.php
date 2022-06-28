@@ -8,7 +8,7 @@ class UserController extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['model', 'validation']);
+		$this->load->model(['Model', 'Validation']);
 		$this->load->library(['form_validation']);
 	}
 
