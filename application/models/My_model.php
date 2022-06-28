@@ -1,6 +1,6 @@
 <?php 
 
-class Model extends CI_Model{
+class My_model extends CI_Model{
 
 
 	public function get_all($table)
