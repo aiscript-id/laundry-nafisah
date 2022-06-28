@@ -1120,7 +1120,7 @@ class CI_Form_validation {
 		sscanf($field, '%[^.].%[^.]', $table, $field);
 		
 		return isset($this->CI->db)
-			? ($this->CI->db->limit(1)->get_where($table, array($field => $str))->affected_rows() === 0)
+			? ($this->CI->db->limit(1)->get_where($table, array($field => $str))->num_rows() === 0)
 			: FALSE;
 
 		// $query = $this->CI->db->query("SELECT COUNT(*) AS count FROM `$table` WHERE `$field` = '".$this->CI->db->escape_str($str)."'");
