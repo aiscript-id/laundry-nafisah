@@ -303,7 +303,7 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 
 		public function cetak($idTransaksi=null){
 			if(!isset($idTransaksi)) show_404();
-			require_once(APPPATH.'third_party/fpdf/fpdf.php');
+			require_once(APPPATH.'third_party/fpdf/Fpdf.php');
 
 			$idTransaksi = str_replace(['-','_','~'],['=','+','/'],$idTransaksi);
 			$idTransaksi = $this->encryption->decrypt($idTransaksi);
