@@ -25,6 +25,7 @@ class Auth extends CI_Controller {
 		$cek 	= $this->model->get_by($this->table, 'username' ,$user)->row_array();
 		$validasi = $this->form_validation->set_rules($this->validation->val_login());
 		
+		
 		if($validasi->run()==false)
 		{
 			$data = ['content' 	=> 'admin/login',
