@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class chat extends CI_Controller {
+class Chat extends CI_Controller {
 
 	var $folder = 'chat/';
 	var $layout = 'chat/layout';
