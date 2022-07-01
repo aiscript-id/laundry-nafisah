@@ -23,7 +23,7 @@ class Auth extends CI_Controller {
 		$user 	= $post['username'];
 		$pass	= $post['password'];
 		$cek 	= $this->model->get_by($this->table, 'username' ,$user)->row_array();
-		$validasi = $this->form_validation->set_rules($this->val->val_login());
+		$validasi = $this->form_validation->set_rules($this->validation->val_login());
 		
 		if($validasi->run()==false)
 		{
