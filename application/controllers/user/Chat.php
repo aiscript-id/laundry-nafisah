@@ -54,7 +54,7 @@ class Chat extends CI_Controller {
 		$this->db->where('user_id', $this->session->userdata('id'))->update('chat', ['last_message' => date('Y-m-d H:i:s')]);
 
 		// redirect back
-		redirect('chat/create_chat');
+		redirect('user/chat/create_chat');
 
 	}
 
