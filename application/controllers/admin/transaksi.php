@@ -301,9 +301,29 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 			echo 'Berhasil';
 		}
 
+		public function print($id)
+		{
+			if(!isset($id)) show_404();
+
+			$transaksi = $this->db->select('nama, tgl_transaksi, paket_transaksi, jenis_paket, berat_jumlah, total_transaksi, nama_d, jumlah_d')
+								->from('transaksi as a')
+								->join('transaksi_detail as b', 'a.id_transaksi=b.id_transaksi_d')
+								->where('id_transaksi',$id)
+								->get()->last_row();
+								// var_dump($transaksi);
+								
+
+			$data = [
+				'transaksi'	=> $transaksi,
+				// 'biaya'		=> $this->model->get_all_biaya('biaya')->result(),
+				'print'	=> true,	
+			];
+			$this->load->view($this->folder.'cetak', $data);
+		}
+
 		public function cetak($idTransaksi=null){
 			if(!isset($idTransaksi)) show_404();
-			
+
 			require_once(APPPATH.'third_party/fpdf/Fpdf.php');
 
 

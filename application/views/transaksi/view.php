@@ -63,7 +63,7 @@
                     <td><?=$t->tgl_transaksi?></td>
                     <td>
                         <button class="btn btn-sm btn-info viewDetail" title="Detail" id="viewDetail" value="<?=$id?>"><i class="fa fa-eye"></i></button>
-                        <a href="<?=base_url('admin/transaksi/cetak/'.$id)?>" class="btn btn-sm btn-primary" title="Print" ><i class="fa fa-print"></i></a>
+                        <a href="<?=base_url('admin/transaksi/print/'.$t->id_transaksi)?>" class="btn btn-sm btn-primary" title="Print" ><i class="fa fa-print"></i></a>
                     </td>
             </tr>
           <?php $no++; } ?>
