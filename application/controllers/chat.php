@@ -12,6 +12,7 @@ class Chat extends CI_Controller {
 		$this->load->model('validation_model', 'validation');
 		$this->load->library(['form_validation']);
 
+		
 	}
 
 	public function index()
