@@ -127,7 +127,7 @@
             $jam = date('H:i', strtotime($t->jam_transaksi));
             $tanggal = date('d-m-Y', strtotime($t->tgl_transaksi));
 
-            $progress = $this->model->get_by('transaksi_status', 'id_transaksi_s', $t->id_transaksi)->result_array();
+            $progress = $this->my_model->get_by('transaksi_status', 'id_transaksi_s', $t->id_transaksi)->result_array();
             ?>
             <svg class="bd-placeholder-img bg-danger mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="<?= $color ?>"></rect><text x="50%" y="50%" fill="<?= $color ?>" dy=".3em">32x32</text></svg>
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
