@@ -305,10 +305,7 @@ defined('BASEPATH') OR exit ('No direct scrip access allowed');
 		{
 			if(!isset($id)) show_404();
 
-			$transaksi = $this->db->select('nama, tgl_transaksi, paket_transaksi, jenis_paket, berat_jumlah, total_transaksi, nama_d, jumlah_d')
-								->join('transaksi_detail as b', 'transaksi.id_transaksi=b.id_transaksi_d')
-								->where('id_transaksi',$id)
-								->get('transaksi')->last_row();
+			$transaksi = $this->db->select('nama, tgl_transaksi, paket_transaksi, jenis_paket, berat_jumlah, total_transaksi, nama_d, jumlah_d')->join('transaksi_detail as b', 'transaksi.id_transaksi=b.id_transaksi_d')->where('id_transaksi',$id)->get('transaksi')->last_row();
 								// var_dump($transaksi);
 								
 
