@@ -60,5 +60,8 @@ $route['auth'] 	= "UserController/auth";
 
 $route['dashboard'] = "UserController/dashboard";
 
+$route['chat'] = "ChatController/index";
+$route['chat/create_chat'] = "ChatController/create_chat";
+$route['chat/send_message'] = "ChatController/send_message";
 // ADMIN
 $route['admin'] 	= "Admin/Login";
