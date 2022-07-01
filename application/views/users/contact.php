@@ -1,5 +1,5 @@
 <!-- Contact -->
-  <div class="contact">
+<div class="contact">
     <div class="container ">
       <div class="row py-5">
         <div class="col text-center ">
@@ -9,14 +9,14 @@
       </div>
       <div class="row justify-content-center mb-5">
         <div class="col-lg-4 mb-4">
-        	  <div class="card text-white" style="background-color: #3fa1c6">
+            <div class="card text-white" style="background-color: #3fa1c6">
               <div class="card-header p-1">
                 <h4 class="card-title font-weight-bold text-center">Kontak</h4>
               </div>
             </div>
             <ul class="list-group">
-              <li class="list-group-item"><i class="fas fa-phone"></i> 081995862719</li>
-              <li class="list-group-item"><i class="far fa-envelope"></i> laundryNapisah@gmail.com </li>
+              <li class="list-group-item"><i class="fas fa-phone"></i> 085249335669</li>
+              <li class="list-group-item"><i class="far fa-envelope"></i> Assdhnapisah.@gmail.com </li>
             </ul>
             <div class="card text-white mt-3" style="background-color: #3fa1c6">
               <div class="card-header p-1">
@@ -25,8 +25,8 @@
             </div>
             <ul class="list-group">
               <li class="list-group-item"><i class="fa fa-building"></i> My Home</li>
-              <li class="list-group-item"><i class="fa fa-map-marked-alt"></i> Barito Kuala</li>
-              <li class="list-group-item"><i class="fa fa-map-marker-alt"></i>  Barito Kuala, Kalimantan Selatan, Indonesia</li>
+              <li class="list-group-item"><i class="fa fa-map-marked-alt"></i> Margasari, Baringin A</li>
+              <li class="list-group-item"><i class="fa fa-map-marker-alt"></i>  Tapin, Kalimantan Selatan, Indonesia</li>
             </ul>
         </div>
         <div class="col-lg-8">
