@@ -118,7 +118,7 @@
         </div>
         <div class="card-footer">
           <!-- create message -->
-          <form action="<?= base_url('chat/send_message') ?>" method="post">
+          <form action="<?= base_url('user/chat/send_message') ?>" method="post">
             <!-- input with button send -->
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Type your message here..." name="message">
