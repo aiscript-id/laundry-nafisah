@@ -94,7 +94,7 @@
                         </td>
                         <td>
                           <?php if ($t->strika == 1): ?>
-                            <a href="<?=base_url('admin/status/kirim_notifikasi/').$id ?>" class="btn btn-sm btn-success" title="Kirim Notifikasi"><i class="fa fa-send"></i></a>
+                            <a href="<?=base_url('admin/status/kirim_notifikasi/').$id ?>" class="btn btn-sm btn-success" title="Kirim Notifikasi"><i class="fa fa-bell" aria-hidden="true"></i>Kirim Notifikasi</a>
                           <?php endif; ?>
                         </td>
                     </tr>
