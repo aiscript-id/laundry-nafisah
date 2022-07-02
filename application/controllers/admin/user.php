@@ -49,7 +49,8 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 							'nama'		=> $post['nama'],
 							'username'	=> $post['username'],
 							'password'	=> password_hash($post['password1'], PASSWORD_DEFAULT),
-							'level'		=> $post['level']
+							'level'		=> $post['level'],
+							'whatsapp'	=> $post['whatsapp'],
 						];
 				$this->model->save($this->table, $data);
 				$this->session->set_flashdata('flash', '<div class="alert alert-success alert-dismissible fade show" role="alert">Data berhasil di simpan.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
