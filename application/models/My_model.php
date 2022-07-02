@@ -96,8 +96,8 @@ class My_model extends CI_Model{
 		// break
 		var_dump($phone);
 		$curl = curl_init();
-		$token = "Y3ZQkfd5Uu27dWPoibZDT0sMC3gD4v7qmU9DPhht3XamiZtJfaQPjqjIe8DIoK6t";
-		curl_setopt($curl, CURLOPT_URL,  "https://eu.wablas.com/api/send-message?phone=$phone&message=$message&token=$token&isGroup=$group&random=true");
+		$token = "3J8JMHSQgK5pEHuNOrMngmfWxgYy8VNl6SdySXZLTUaKxDFhLybQKYxBKvemTfg5";
+		curl_setopt($curl, CURLOPT_URL,  "https://texas.wablas.com/api/send-message?phone=$phone&message=$message&token=$token&isGroup=$group&random=true");
 		$result = curl_exec($curl);
 		curl_close($curl);
 		echo "<pre>";
