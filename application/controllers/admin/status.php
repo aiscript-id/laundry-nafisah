@@ -78,6 +78,16 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 			redirect('admin/status/proses');
 		}
 
+		public function kirim_notifikasi($idTransaksi)
+		{
+			$transaksi = $this->model->get_by('transaksi', 'id_transaksi', $idTransaksi)->row();
+			$user = $this->model->get_by('user', 'id', $transaksi->id_user)->row();
+			$msg = 'Hi, '.$user->nama.'. Kami dari Laundry Napisah. Order No. '.$transaksi->id_transaksi.'('.$transaksi->paket_transaksi.') telah siap. Pakaian kamu sudah selesai dicuci nih, silahkan ambil ke tempat kami ya. Terima Kasih';
+			$this->model->kirimNotifikasi2($user->whatsapp, $msg);
+
+			redirect('admin/status/proses');
+		}
+
 
 		public function status_selesai()
 		{

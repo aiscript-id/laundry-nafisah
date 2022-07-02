@@ -22,6 +22,7 @@
                 <th style="text-align: center;">Strika</th>
                 <th style="text-align: center;">Siap</th>
                 <th style="text-align: center;">Selesai</th>
+                <th>Kirim Notifikasi</th>
               </tr>
             </thead>
                 <tbody>
@@ -90,6 +91,11 @@
                               <div class="btn btn-sm btn-secondary btn-circle" title="Selesai"><i class="fa fa-hourglass-half"></i></div>
                             <?php } ?>
                           </div>
+                        </td>
+                        <td>
+                          <?php if ($t->strika == 1): ?>
+                            <a href="<?=base_url('admin/status/kirim_notifikasi/').$id ?>" class="btn btn-sm btn-success" title="Kirim Notifikasi"><i class="fa fa-send"></i></a>
+                          <?php endif; ?>
                         </td>
                     </tr>
                         
